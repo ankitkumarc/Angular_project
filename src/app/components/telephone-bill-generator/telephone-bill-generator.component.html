@@ -1,0 +1,33 @@
+<!-- src/app/components/telephone-bill-generator/telephone-bill-generator.component.html -->
+<div>
+    <h2>Telephone Booth Bill Generator</h2>
+
+    <!-- <div>
+        <label for="boothNumber">Booth Number:</label>
+        <input type="number" id="boothNumber" [(ngModel)]="currentBooth.boothNumber" />
+    </div> -->
+
+    <div class="main-component">
+        <div class="main-component-1">
+
+            <button (click)="startStopwatch('Domestic')" class="button1">Start Domestic Call(Price: 0.3 ₹/sec)</button>
+            <button (click)="startStopwatch('International')" class="button1">Start International Call(Price: 0.5
+                ₹/sec)</button>
+        </div>
+        <button (click)="endCall()" class="button-end">End Call</button>
+    </div>
+
+    <!-- src/app/components/telephone-bill-generator/telephone-bill-generator.component.html -->
+    <div *ngIf="isCallActive">
+        <app-stopwatch [start]="isStopwatchRunning" (time)="updateCallDuration($event)"></app-stopwatch>
+    </div>
+
+
+    <div *ngIf="showBill">
+        <h3>Generated Bill</h3>
+        <!-- <p>Booth Number: {{ currentBooth.boothNumber }}</p> -->
+        <p>Call Type: {{ currentBooth.callType }}</p>
+        <p>Call Duration: {{ formatTime(callDuration) }}</p>
+        <p>Total Bill: {{ totalBill | currency: 'INR' }}</p>
+    </div>
+</div>

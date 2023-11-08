@@ -1,0 +1,99 @@
+/* src/app/components/telephone-bill-generator/telephone-bill-generator.component.css */
+
+/* Container styling */
+div {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f8f8f8;
+    /* Light background color */
+}
+
+/* Heading styling */
+h2 {
+    color: #333;
+    text-align: center;
+}
+
+/* Button styling */
+button {
+    background-color: #6bda6f;
+    color: white;
+    padding: 12px 20px;
+    margin: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    /* Make buttons full width on small screens */
+}
+
+.button-end {
+    background-color: #c73f3f;
+    color: rgb(243, 231, 231);
+    padding: 12px 20px;
+    margin: 8px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    /* Make buttons full width on small screens */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.button-end:hover {
+    background-color: #760a0a;
+}
+
+
+/* Call buttons container */
+div:nth-child(2) {
+    text-align: center;
+}
+
+/* Stopwatch container */
+div:nth-child(3) {
+    text-align: center;
+}
+
+/* Generated Bill section styling */
+h3 {
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Bill details */
+p {
+    margin: 8px 0;
+}
+
+/* Total bill styling */
+p:last-child {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Responsive styling */
+@media screen and (max-width: 600px) {
+    div {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    button {
+        width: calc(50% - 16px);
+        /* Two buttons in a row */
+    }
+}
